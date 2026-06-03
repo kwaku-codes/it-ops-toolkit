@@ -1,0 +1,50 @@
+(Tue Mar 11 09:15:01 2025) [sssd[be[lan.example.com]]] [INFO] Starting up
+(Tue Mar 11 09:15:02 2025) [sssd[be[lan.example.com]]] [INFO] Loaded configuration from /etc/sssd/sssd.conf
+(Tue Mar 11 09:15:03 2025) [sssd[be[lan.example.com]]] [INFO] Backend is online
+(Tue Mar 11 09:15:04 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:04 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [12]
+(Tue Mar 11 09:15:04 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_process_result: about to wait for results
+(Tue Mar 11 09:15:05 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=jdoe,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:05 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user jdoe
+(Tue Mar 11 09:15:06 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sysdb_set_user_attr: set attributes for user jdoe
+(Tue Mar 11 09:15:06 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:07 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [13]
+(Tue Mar 11 09:15:07 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=asmith,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:08 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user asmith
+(Tue Mar 11 09:15:08 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:09 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [14]
+(Tue Mar 11 09:15:09 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=bwong,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:10 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user bwong
+(Tue Mar 11 09:15:10 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sysdb_set_user_attr: set attributes for user bwong
+(Tue Mar 11 09:15:11 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:11 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [15]
+(Tue Mar 11 09:15:12 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=ckim,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:12 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user ckim
+(Tue Mar 11 09:15:13 2025) [sssd[be[lan.example.com]]] [WARN] sdap_handle_release: connection released but had pending request
+(Tue Mar 11 09:15:13 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:14 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [16]
+(Tue Mar 11 09:15:14 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=dpatel,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:15 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user dpatel
+(Tue Mar 11 09:15:15 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sysdb_set_user_attr: set attributes for user dpatel
+(Tue Mar 11 09:15:16 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:16 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [17]
+(Tue Mar 11 09:15:17 2025) [sssd[be[lan.example.com]]] [INFO] Refresh expired netgroups: 0 records found
+(Tue Mar 11 09:15:17 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=elee,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:18 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user elee
+(Tue Mar 11 09:15:18 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sysdb_set_user_attr: set attributes for user elee
+(Tue Mar 11 09:15:19 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:19 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [18]
+(Tue Mar 11 09:15:20 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=fgarcia,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:20 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user fgarcia
+(Tue Mar 11 09:15:21 2025) [sssd[be[lan.example.com]]] [WARN] sdap_handle_release: connection released but had pending request
+(Tue Mar 11 09:15:21 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:22 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [19]
+(Tue Mar 11 09:15:22 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_parse_entry: OriginalDN [CN=ghernandez,CN=Users,DC=lan,DC=example,DC=com]
+(Tue Mar 11 09:15:23 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_save_user: saving user ghernandez
+(Tue Mar 11 09:15:23 2025) [sssd[be[lan.example.com]]] [FATAL] sdap_get_generic_ext_recv: ldap_search_ext failed: Server is unavailable
+(Tue Mar 11 09:15:24 2025) [sssd[be[lan.example.com]]] [INFO] Backend going offline
+(Tue Mar 11 09:15:25 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) be_mark_offline: marking domain offline
+(Tue Mar 11 09:15:30 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) be_reset_offline: resetting offline status
+(Tue Mar 11 09:15:31 2025) [sssd[be[lan.example.com]]] [INFO] Backend is online
+(Tue Mar 11 09:15:32 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_get_generic_ext_step: calling ldap_search_ext
+(Tue Mar 11 09:15:32 2025) [sssd[be[lan.example.com]]] [DEBUG] (0x0070) sdap_op_add: added a new operation with msgid [20]
