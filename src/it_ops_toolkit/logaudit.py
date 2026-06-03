@@ -48,3 +48,12 @@ def run(args) -> int:
     """Entry point called from __main__.py once argparse is wired up (Evening 3)."""
     # TODO Evening 3: implement this.
     raise NotImplementedError("Implement on Evening 3")
+
+
+if __name__ == "__main__": 
+    log_path = "samples/sssd.log" 
+    with open(log_path) as f:
+        for line in f:
+            print(line, end="")
+
+            
