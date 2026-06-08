@@ -33,8 +33,17 @@ from pathlib import Path
 
 def count_levels(path: str) -> Counter:
     """Return a Counter of log-level occurrences in the file at `path`."""
-    # TODO Evening 2: implement this.
-    raise NotImplementedError("Implement on Evening 2")
+    # CODE ADDED FOR EVENING 2 BUILD 👇🏾
+    pattern =re.compile(r"\[(DEBUG|INFO|WARN|FATAL)\]")
+    counts = Counter()
+    with open(path) as f: 
+        for line in f: 
+            match = pattern.search(line)
+            if match: 
+                level = match.group(1)
+                counts[level] += 1 
+
+    return counts 
 
 
 # TODO Evening 3: file-size check and exit codes.
@@ -49,11 +58,16 @@ def run(args) -> int:
     # TODO Evening 3: implement this.
     raise NotImplementedError("Implement on Evening 3")
 
+# CODE ADDED FROM EVENING 1 BUILD 👇🏾
+#if __name__ == "__main__": 
+   # log_path = "samples/sssd.log" 
+   # with open(log_path) as f:
+       # for line in f:
+          #  print(line, end="")
 
-if __name__ == "__main__": 
-    log_path = "samples/sssd.log" 
-    with open(log_path) as f:
-        for line in f:
-            print(line, end="")
-
-            
+#UPDATED VERSION FOR EVENING 2 BUILD 
+if __name__ == "__main__":
+    log_path = "samples/sssd.log"
+    counts = count_levels(log_path)
+    for level, count in counts.most_common():
+        print(f"{level}: {count}")
