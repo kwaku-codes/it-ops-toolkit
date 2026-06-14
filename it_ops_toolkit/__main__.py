@@ -9,7 +9,7 @@ evening plan in the project notes.
 
 import argparse
 import sys
-
+from . import logaudit
 
 def main() -> int:
     parser = argparse.ArgumentParser(
@@ -19,9 +19,9 @@ def main() -> int:
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # TODO Evening 3: add the `logaudit` subcommand with --path and --threshold-mb
-    # logaudit_parser = subparsers.add_parser("logaudit", help="Scan a log file for debug-mode patterns.")
-    # logaudit_parser.add_argument("--path", required=True, help="Path to the log file.")
-    # logaudit_parser.add_argument("--threshold-mb", type=int, default=100, help="Flag files larger than this.")
+    logaudit_parser = subparsers.add_parser("logaudit", help="Scan a log file for debug-mode patterns.")
+    logaudit_parser.add_argument("--path", required=True, help="Path to the log file.")
+    logaudit_parser.add_argument("--threshold-mb", type=int, default=100, help="Flag files larger than this.")
 
     # TODO Evening 4: add the `assetage` subcommand with --path, --max-age-years, --format
     # assetage_parser = subparsers.add_parser("assetage", help="Audit asset CSV for ageing machines.")
@@ -30,6 +30,8 @@ def main() -> int:
     # assetage_parser.add_argument("--format", choices=["text", "markdown", "json"], default="text")
 
     args = parser.parse_args()
+    if args.command == "logaudit":
+        return logaudit.run(args)
 
     # TODO Evening 3+: dispatch to the right command handler
     # if args.command == "logaudit":
@@ -37,8 +39,7 @@ def main() -> int:
     # if args.command == "assetage":
     #     return run_assetage(args)
 
-    print("Hello from it-ops-toolkit. Fill me in across the week.")
-    return 0
+
 
 
 if __name__ == "__main__":

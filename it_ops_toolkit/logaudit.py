@@ -55,19 +55,35 @@ def count_levels(path: str) -> Counter:
 
 def run(args) -> int:
     """Entry point called from __main__.py once argparse is wired up (Evening 3)."""
-    # TODO Evening 3: implement this.
-    raise NotImplementedError("Implement on Evening 3")
+    counts = count_levels(args.path)
+    size_bytes = Path(args.path).stat().st_size
+    size_mb = size_bytes / (1024 * 1024)
 
-# CODE ADDED FROM EVENING 1 BUILD 👇🏾
+    for level, count in counts.most_common():
+        print(f"{level}: {count}")
+    print(f"File size: {size_mb:.1f} MB")
+
+    total = sum(counts.values())
+    debug_ratio = counts["DEBUG"] / total if total > 0 else 0
+    suspicious = size_mb > args.threshold_mb or debug_ratio > 0.8
+
+    if suspicious:
+        print("Status: SUSPICIOUS — possible debug-storm or oversized log.")
+        return 1
+
+    print("Status: OK")
+    return 0
+
+# NOTE - CODE ADDED FROM EVENING 1 BUILD 👇🏾
 #if __name__ == "__main__": 
    # log_path = "samples/sssd.log" 
    # with open(log_path) as f:
        # for line in f:
           #  print(line, end="")
 
-#UPDATED VERSION FOR EVENING 2 BUILD 
-if __name__ == "__main__":
-    log_path = "samples/sssd.log"
-    counts = count_levels(log_path)
-    for level, count in counts.most_common():
-        print(f"{level}: {count}")
+# NOTE - VERSION FOR EVENING 2 BUILD 
+#if __name__ == "__main__":
+    #log_path = "samples/sssd.log"
+    #counts = count_levels(log_path)
+    #for level, count in counts.most_common():
+     #   print(f"{level}: {count}")
